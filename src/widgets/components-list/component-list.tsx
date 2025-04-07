@@ -7,17 +7,15 @@ interface IComponentList {
 
 const ComponentList = ({ onClick }: IComponentList) => {
   return (
-    <div className='flex flex-wrap'>
-      <div className='flex-col items-center justify-center'>
-        {data.map((elem) => {
-          return (
-            <ComponentItem
-              key={elem.name}
-              item={elem}
-              onClick={onClick}></ComponentItem>
-          );
-        })}
-      </div>
+    <div className='flex flex-wrap gap-10'>
+      {data.map((elem) => {
+        return (
+          <ComponentItem
+            key={elem.name}
+            item={elem}
+            onClick={onClick}></ComponentItem>
+        );
+      })}
     </div>
   );
 };

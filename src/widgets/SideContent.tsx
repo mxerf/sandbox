@@ -9,7 +9,7 @@ interface ISideContent {
 
 const SideContent = ({ data }: ISideContent) => {
   return (
-    <div className='w-full h-full flex flex-col gap-4 bg-neutral-900 p-8 rounded-3xl pointer-events-auto'>
+    <div className='w-full h-full flex flex-col gap-4 bg-foreground/5 p-8 rounded-3xl pointer-events-auto'>
       <div className='text-2xl'>{data.name}</div>
       <div className='w-full max-w-2xl h-full p-2'>
         <Tabs.Root
@@ -22,7 +22,7 @@ const SideContent = ({ data }: ISideContent) => {
             style={{ scrollbarWidth: "none" }}>
             {data.code.map((code) => (
               <Tabs.Trigger
-                className='group relative pt-3 pr-2 pb-2 pl-2 font-medium text-sm text-zinc-500 transition-colors data-[state=active]:text-[#80A665] dark:text-zinc-400 dark:data-[state=active]:text-[#80A665] cursor-pointer'
+                className='group relative pt-3 pr-2 pb-2 pl-2 font-medium text-sm text-foreground/80 transition-colors data-[state=active]:text-[#80A665] dark:text-zinc-400 dark:data-[state=active]:text-[#80A665] cursor-pointer'
                 key={code.slug}
                 value={code.slug}>
                 {code.slug}
